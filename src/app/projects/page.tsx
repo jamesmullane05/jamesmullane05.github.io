@@ -10,15 +10,21 @@ export default async function Projects() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center py-8">
-    {projects.map(p => (
-      <ProjectCard 
-        key={p.name}
-        title={p.name}
-        description={p.description}
-        link={p.link}
-      />
-    ))}
+    <div className='flex flex-col items-center py-16 '>
+      <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          Projects
+      </h2>
+      <div className="flex flex-wrap justify-center gap-6 py-8">
+        
+        {projects.map(p => (
+          <ProjectCard 
+            key={p.name}
+            title={p.name}
+            description={p.description}
+            link={p.link}
+          />
+        ))}
+      </div>
     </div>
   )
 }

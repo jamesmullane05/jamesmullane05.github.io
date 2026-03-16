@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getRepository } from "@/src/services/getRepository";
 import {handleError} from "../../../../lib/handleError"

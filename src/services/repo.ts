@@ -30,17 +30,6 @@ export class Repository{
         const repo: GithubRepo = await this.github.getRepoData(projectname)
         return this.GitRepoToProjects(repo)
     }
-/*
-    async getLeetcodeProfile(){
-        const repo: LeetCodeUserProfile = await this.leetcode.getLeetCodeStats();
-        if (repo.matchedUser.tagProblemCounts?.advanced.length && repo.matchedUser.tagProblemCounts?.fundamental.length && repo.matchedUser.tagProblemCounts?.intermediate.length){
-            return {
-                username : repo.matchedUser.username,
-                count : repo.matchedUser.tagProblemCounts?.advanced.length + repo.matchedUser.tagProblemCounts?.fundamental.length + repo.matchedUser.tagProblemCounts?.intermediate.length ?? 0
-            }
-        }
-    }
-        */
 
     async getLeetcodeCompletedProblems(): Promise<LeetcodeProblem[]> {
         const submissions: LeetCodeRecentAcSubmission[] = await this.leetcode.getLeetCodeSubmissions();

@@ -2,6 +2,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import DownloadCVButton from "./DownloadCVButton"
+import ViewProjectsButton from "./ViewProjectsButton"
 //mt-10 mb-30 px-25 py-30
 function Hero() {
   return (
@@ -22,8 +23,9 @@ function Hero() {
                     <FaEnvelope className="text-black"/>
                 </a>
             </div>
-            <div>
+            <div className='flex flex-row gap-3'>
               <DownloadCVButton/>
+              <ViewProjectsButton/>
             </div>
         </div>
     </section>

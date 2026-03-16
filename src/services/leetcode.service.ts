@@ -16,6 +16,8 @@ async getLeetCodeSubmissions(): Promise<LeetCodeRecentAcSubmission[]> {
       "Content-Type": "application/json",
       Referer: "https://leetcode.com",
       Origin: "https://leetcode.com",
+      "User-Agent": "Mozilla/5.0"
+
     },
     body: JSON.stringify({
       query: GET_USER_SUBMISSIONS_QUERY,

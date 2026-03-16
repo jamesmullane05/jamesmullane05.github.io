@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="space-y-6">
 
           <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-lg">Frontend Development</h3>
+            <h3 className="font-semibold text-lg"> Cosmoshop </h3>
             <p className="text-gray-600 mt-2">
               Building responsive user interfaces using React, Next.js, and
               modern CSS frameworks like Tailwind.
@@ -18,18 +18,17 @@ export default function Experience() {
           </div>
 
           <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-lg">Web Applications</h3>
+            <h3 className="font-semibold text-lg"> Henderson Nuttal Jewelers </h3>
             <p className="text-gray-600 mt-2">
-              Creating scalable web applications with clean architecture and
+              Creating a website for a local Jeweler with clean architecture and
               modern development practices.
             </p>
           </div>
 
           <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-lg">UI / UX</h3>
+            <h3 className="font-semibold text-lg"> Mcdonalds Crew Member </h3>
             <p className="text-gray-600 mt-2">
-              Designing intuitive layouts and improving overall user
-              experience.
+              Learnt how to flip burger patties
             </p>
           </div>
 

@@ -13,10 +13,13 @@ export default async function LeetcodePage() {
   }
 
   return (
-    <div>
-      {problems.map(p => (
-          <LeetcodeCard key={p.title} problemName={p.title} programmingLanguage={p.lang}/>
-      ))}
+    <div className='flex flex-col items-center py-16'>
+      <h2 className='text-2xl font-semibold text-gray-900 mb-4'> Leetcode </h2>
+      <div>
+        {problems.map(p => (
+            <LeetcodeCard key={p.title} problemName={p.title} programmingLanguage={p.lang}/>
+        ))}
+      </div>
     </div>
   );
 }
