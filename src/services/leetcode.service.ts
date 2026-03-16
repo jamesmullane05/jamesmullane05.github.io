@@ -24,8 +24,13 @@ async getLeetCodeSubmissions(): Promise<LeetCodeRecentAcSubmission[]> {
       variables: { username: this.username, limit: 50 },
     }),
   });
+  
 
-  if (!response.ok) throw new Error("Failed to fetch LeetCode submissions");
+  if (!response.ok) {
+    const text = await response.text();
+    console.error("LeetCode response:", response.status, text);
+    throw new Error(`LeetCode error ${response.status}`);
+  }
 
   const json: LeetCodeGraphQLResponse<LeetCodeRecentAcSubmissionsData> =
     await response.json();
