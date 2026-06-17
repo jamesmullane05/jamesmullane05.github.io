@@ -25,7 +25,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/james-mullane-95a526252/",
   leetcode: "https://leetcode.com/jamesmullane05",
   resume: "/cv.pdf",
-  image: "/profile.jpeg",
+  image: "/profile.jpg",
   imageAlt: "James Mullane",
   initials: "JM",
   navbarSubtitle: "CS & Economics · Auckland",
@@ -138,11 +138,25 @@ export const techIcons: { name: string; Icon: IconType }[] = [
   { name: "GitHub", Icon: SiGithub },
 ];
 
-export const experience = [
+export type ExperienceItem = {
+  role: string;
+  company: string;
+  date: string;
+  description: string;
+  bullets: string[];
+  logo: string;
+  logoAlt: string;
+  website?: string;
+};
+
+export const experience: ExperienceItem[] = [
   {
     role: "Co-founder",
     company: "Cosmoshop",
     date: "Jul 2023 – Present",
+    logo: "https://cosmoshop.co.nz/cdn/shop/files/Cosmoshop_valentines_2_250x.svg?v=1769208287",
+    logoAlt: "Cosmoshop logo",
+    website: "https://www.cosmoshop.co.nz",
     description:
       "Co-founded and operate an e-commerce watch business while building tools that improve product listing, order processing, and fulfilment workflows.",
     bullets: [
@@ -155,6 +169,9 @@ export const experience = [
     role: "Web Developer",
     company: "Nuttall Henderson Jewellers",
     date: "Feb 2021 – Dec 2022",
+    logo: "/logos/nuttall-henderson.svg",
+    logoAlt: "Nuttall Henderson Jewellers logo",
+    website: "https://nuttallhendersonjewellers.co.nz",
     description:
       "Designed, migrated, and maintained a Shopify website for a local jewellery business.",
     bullets: [
@@ -166,6 +183,9 @@ export const experience = [
     role: "Crew Member",
     company: "McDonald’s",
     date: "Feb 2022 – Feb 2023",
+    logo: "/logos/mcdonalds.jpg",
+    logoAlt: "McDonald’s NZ golden arches logo",
+    website: "https://www.mcdonalds.com/nz/en-nz.html",
     description:
       "Developed customer service, communication, teamwork, and time-management skills in a fast-paced environment.",
     bullets: [

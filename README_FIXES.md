@@ -47,3 +47,64 @@ src/data/site.ts
 ```
 
 Edit this file to update projects, skills, links, profile text, and experience.
+
+## Latest navbar/theme update
+
+- Changed the navbar subtitle from “Software Engineering Portfolio” to “CS & Economics · Auckland”.
+- Added a Dark/Light toggle button to the navbar.
+- Added a site-wide theme provider using `localStorage`, so the selected theme persists between visits.
+- Added dark-mode CSS overrides in `src/app/globals.css` so cards, text, borders, backgrounds, and shadows switch cleanly.
+- Verified again with `npm run lint` and `npm run build`.
+
+
+## Latest update
+
+The profile image, image alt text, nav initials, and navbar subtitle are now controlled from `src/data/site.ts` inside the `profile` object:
+
+```ts
+image: "/profile.jpg",
+imageAlt: "James Mullane",
+initials: "JM",
+navbarSubtitle: "CS & Economics · Auckland",
+```
+
+Change those values in one place to update the site.
+
+## Latest update: company logos and animations
+
+- Added company logo assets to `public/logos/`:
+  - `cosmoshop.svg`
+  - `nuttall-henderson.svg`
+  - `mcdonalds.svg`
+- Moved logo configuration into `src/data/site.ts` on each `experience` item using `logo`, `logoAlt`, and `website` fields.
+- Updated `src/app/about/Experience.tsx` so each experience card shows the relevant company logo and a small website link.
+- Added `src/app/components/ScrollAnimations.tsx` to trigger smooth reveal-on-scroll animations with IntersectionObserver.
+- Added global animation CSS in `src/app/globals.css`, including:
+  - smooth scroll offset
+  - fade-up reveal animations
+  - floating hero card animation
+  - soft pulsing background glow
+  - reduced-motion support for accessibility
+
+Verified with:
+
+```bash
+npm run lint
+npm run build
+```
+
+## Latest repair pass: homepage photo, logos, and animation reliability
+
+- Replaced `public/profile.jpg` with the supplied Auckland/Sky Tower portrait and kept the image path controlled by `src/data/site.ts`.
+- Reworked the homepage hero image to use a portrait `4 / 5` aspect ratio so the new photo is not awkwardly square-cropped.
+- Replaced the Cosmoshop, Nuttall Henderson Jewellers, and McDonald’s logo assets in `public/logos/`.
+- Increased the experience-card logo container width so wide wordmarks, especially Cosmoshop and Nuttall Henderson, are actually readable.
+- Rebuilt `src/app/components/ScrollAnimations.tsx` so reveal animations re-run after route changes.
+- Made reveal CSS fail-safe: if JavaScript or IntersectionObserver fails, the page remains visible instead of hiding sections.
+
+Verified with:
+
+```bash
+npm run lint
+NEXT_TELEMETRY_DISABLED=1 npm run build
+```

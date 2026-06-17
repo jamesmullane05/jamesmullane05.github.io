@@ -8,7 +8,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="mx-auto max-w-6xl px-5 py-14 sm:px-6">
-      <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <section data-reveal className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2rem] border border-slate-200 bg-slate-950 p-8 text-white shadow-xl shadow-slate-300/40 sm:p-10">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">Contact</p>
           <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Let’s talk about software internships.</h1>
@@ -29,7 +29,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
+        <div data-reveal className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
           <h2 className="text-2xl font-black text-slate-950">Quick links</h2>
           <p className="mt-3 leading-7 text-slate-600">
             The best way to reach me is by email. You can also review my code and professional profile below.
@@ -40,7 +40,7 @@ export default function ContactPage() {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg"
+              className="rounded-3xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg"
             >
               <FaLinkedin className="text-3xl text-sky-700" />
               <h3 className="mt-4 font-black text-slate-950">LinkedIn</h3>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg"
+              className="rounded-3xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg"
             >
               <FaGithub className="text-3xl text-slate-950" />
               <h3 className="mt-4 font-black text-slate-950">GitHub</h3>

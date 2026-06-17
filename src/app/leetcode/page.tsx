@@ -17,7 +17,7 @@ const focusAreas = [
 export default function LeetcodePage() {
   return (
     <main className="mx-auto max-w-6xl px-5 py-14 sm:px-6">
-      <section className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
+      <section data-reveal className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-700">LeetCode</p>
         <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
           Practising problem solving for technical interviews.
@@ -36,8 +36,13 @@ export default function LeetcodePage() {
       </section>
 
       <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {focusAreas.map((area) => (
-          <article key={area} className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm">
+        {focusAreas.map((area, index) => (
+          <article
+            key={area}
+            data-reveal
+            style={{ transitionDelay: `${index * 70}ms` }}
+            className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
             <FaCode className="text-sky-700" />
             <h2 className="mt-4 font-black text-slate-950">{area}</h2>
           </article>

@@ -16,6 +16,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article
+      data-reveal
       className={`group flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/70 ${
         featured ? "lg:col-span-2" : ""
       }`}

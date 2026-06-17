@@ -3,6 +3,9 @@ import "./globals.css";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./context/themeContext";
+import ScrollAnimations from "./components/ScrollAnimations";
+import AnimationProvider from "./components/AnimationProvider";
+import "lenis/dist/lenis.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamesmullane.com"),
@@ -53,9 +56,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen text-slate-950 antialiased transition-colors duration-300 dark:text-slate-100">
         <ThemeProvider>
-          <NavigationBar />
-          {children}
-          <Footer />
+          <AnimationProvider>
+            <ScrollAnimations />
+            <NavigationBar />
+            {children}
+            <Footer />
+          </AnimationProvider>
         </ThemeProvider>
       </body>
     </html>
