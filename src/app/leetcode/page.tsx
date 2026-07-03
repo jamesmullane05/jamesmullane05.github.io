@@ -17,9 +17,9 @@ const focusAreas = [
 export default function LeetcodePage() {
   return (
     <main className="mx-auto max-w-6xl px-5 py-14 sm:px-6">
-      <section data-reveal className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-700">LeetCode</p>
-        <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+      <section data-reveal className="border-b border-slate-200 pb-10">
+        <p className="text-sm font-bold uppercase text-sky-700">LeetCode</p>
+        <h1 className="mt-3 max-w-4xl text-4xl font-black text-slate-950 sm:text-5xl">
           Practising problem solving for technical interviews.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
@@ -29,7 +29,7 @@ export default function LeetcodePage() {
           href={profile.leetcode}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/10 transition hover:-translate-y-0.5 hover:bg-slate-800"
+          className="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
         >
           Open LeetCode profile <FaExternalLinkAlt className="text-xs" />
         </a>
@@ -41,7 +41,7 @@ export default function LeetcodePage() {
             key={area}
             data-reveal
             style={{ transitionDelay: `${index * 70}ms` }}
-            className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="rounded-xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300"
           >
             <FaCode className="text-sky-700" />
             <h2 className="mt-4 font-black text-slate-950">{area}</h2>

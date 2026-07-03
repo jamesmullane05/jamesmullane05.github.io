@@ -1,6 +1,6 @@
+import Education from "./Education";
 import Experience from "./Experience";
 import Introduction from "./Introduction";
-import Skills from "./Skills";
 
 export const metadata = {
   title: "About",
@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-6xl space-y-14 px-5 py-14 sm:px-6">
+    <main className="mx-auto max-w-6xl space-y-20 px-5 pb-24 pt-36 sm:px-6 sm:pt-40">
       <Introduction />
+      <Education />
       <Experience />
-      <Skills />
     </main>
   );
 }

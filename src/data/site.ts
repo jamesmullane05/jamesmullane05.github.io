@@ -20,18 +20,14 @@ export const profile = {
   name: "James Mullane",
   location: "Auckland, New Zealand",
   email: "jamesmullane05@gmail.com",
-  phone: "+64 22 323 4859",
   github: "https://github.com/Jamesmullane05",
   linkedin: "https://www.linkedin.com/in/james-mullane-95a526252/",
   leetcode: "https://leetcode.com/jamesmullane05",
   resume: "/cv.pdf",
-  image: "/profile.jpg",
-  imageAlt: "James Mullane",
-  initials: "JM",
-  navbarSubtitle: "CS & Economics · Auckland",
-  headline: "Computer Science & Economics student building practical software products.",
+  navbarSubtitle: "CS & Economics - Auckland",
+  headline: "Penultimate Computer Science student.",
   summary:
-    "I’m a University of Auckland conjoint student focused on software engineering, automation, backend systems, and useful product experiences. I like turning messy real-world workflows into reliable tools, APIs, and web applications.",
+    "I'm a University of Auckland Computer Science and Economics student interested in practical software, automation, and web experiences.",
 };
 
 export type Project = {
@@ -46,16 +42,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Human Nutrition Unit Website",
-    eyebrow: "Capstone Project · Team Lead / Backend / DevOps",
+    eyebrow: "Capstone Project - Team Lead / Backend / DevOps",
     description:
       "Led a team of six developers building a user-facing website for a University of Auckland research institute.",
     impact:
       "Set up CI/CD workflows, database migrations, independent developer databases, backend architecture, and API integrations for the frontend.",
     tags: ["Next.js", "TypeScript", "APIs", "CI/CD", "Databases"],
+    link: "https://www.capitalise.space/projects/6a44d62d040af2a0b4341c4f",
   },
   {
     title: "Shopify Label Printing Desktop App",
-    eyebrow: "Automation · E-commerce Operations",
+    eyebrow: "Automation - E-commerce Operations",
     description:
       "Built a desktop tool that connects Shopify order data to Brother B-PAC label-printing software.",
     impact:
@@ -64,16 +61,17 @@ export const projects: Project[] = [
   },
   {
     title: "CSV to Shopify Schema Tool",
-    eyebrow: "Data Processing · Product Imports",
+    eyebrow: "Data Processing - Product Imports",
     description:
       "Created a schema-processing tool for transforming supplier CSV files into Shopify-ready product data.",
     impact:
       "Supported column renaming, margin calculations, data transformations, and AI-assisted product-title generation.",
     tags: ["Python", "CSV", "Shopify", "Data", "Automation"],
+    link: "https://github.com/jamesmullane05/CSV-to-Shopify-Schema-Language",
   },
   {
     title: "Facebook Marketplace Automation",
-    eyebrow: "Browser Automation · Internal Tooling",
+    eyebrow: "Browser Automation - Internal Tooling",
     description:
       "Built automation software that reads product information from Excel and creates Facebook Marketplace listings.",
     impact:
@@ -82,9 +80,9 @@ export const projects: Project[] = [
   },
   {
     title: "Cosmoshop E-commerce Platform",
-    eyebrow: "Co-founder · Full-stack / Operations",
+    eyebrow: "Co-founder - Full-stack / Operations",
     description:
-      "Built and operate Cosmoshop’s online storefront and supporting systems across website, Trade Me, Chrono24, and Facebook Marketplace.",
+      "Built and operate Cosmoshop's online storefront and supporting systems across website, Trade Me, Chrono24, and Facebook Marketplace.",
     impact:
       "Combined software, supplier relationships, customer support, stock management, and Meta marketing campaigns into a working commercial operation.",
     tags: ["Shopify", "Product", "Operations", "Meta Ads"],
@@ -92,7 +90,7 @@ export const projects: Project[] = [
   },
   {
     title: "Linux User Group Website",
-    eyebrow: "WDCC · Frontend / RSS",
+    eyebrow: "WDCC - Frontend / RSS",
     description:
       "Contributing to a team of eleven building a website for the University of Auckland Linux User Group.",
     impact:
@@ -138,6 +136,27 @@ export const techIcons: { name: string; Icon: IconType }[] = [
   { name: "GitHub", Icon: SiGithub },
 ];
 
+export type EducationItem = {
+  institution: string;
+  qualification: string;
+  date: string;
+  details?: string;
+};
+
+export const education: EducationItem[] = [
+  {
+    institution: "University of Auckland",
+    qualification: "Bachelor of Science / Bachelor of Commerce Conjoint",
+    date: "Feb 2023 - Dec 2026",
+    details: "Majors in Computer Science and Economics.",
+  },
+  {
+    institution: "Rutherford College",
+    qualification: "NCEA Levels 1, 2, and 3",
+    date: "Feb 2018 - Dec 2022",
+  },
+];
+
 export type ExperienceItem = {
   role: string;
   company: string;
@@ -153,7 +172,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Co-founder",
     company: "Cosmoshop",
-    date: "Jul 2023 – Present",
+    date: "Jul 2023 - Present",
     logo: "https://cosmoshop.co.nz/cdn/shop/files/Cosmoshop_valentines_2_250x.svg?v=1769208287",
     logoAlt: "Cosmoshop logo",
     website: "https://www.cosmoshop.co.nz",
@@ -168,7 +187,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Web Developer",
     company: "Nuttall Henderson Jewellers",
-    date: "Feb 2021 – Dec 2022",
+    date: "Feb 2021 - Dec 2022",
     logo: "/logos/nuttall-henderson.svg",
     logoAlt: "Nuttall Henderson Jewellers logo",
     website: "https://nuttallhendersonjewellers.co.nz",
@@ -181,10 +200,10 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "Crew Member",
-    company: "McDonald’s",
-    date: "Feb 2022 – Feb 2023",
+    company: "McDonald's",
+    date: "Feb 2022 - Feb 2023",
     logo: "/logos/mcdonalds.jpg",
-    logoAlt: "McDonald’s NZ golden arches logo",
+    logoAlt: "McDonald's NZ golden arches logo",
     website: "https://www.mcdonalds.com/nz/en-nz.html",
     description:
       "Developed customer service, communication, teamwork, and time-management skills in a fast-paced environment.",

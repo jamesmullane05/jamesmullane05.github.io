@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { FaMoon, FaSun } from "react-icons/fa6";
 import { useTheme } from "../context/themeContext";
 
 export default function ThemeToggle() {
@@ -13,15 +13,14 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       aria-pressed={isDark}
-      className={`theme-toggle ${isDark ? "is-dark" : "is-light"}`}
-      data-cursor="hover"
+      className="theme-toggle"
     >
-      <span className="theme-toggle-track" aria-hidden="true">
-        <span className="theme-toggle-stars" />
-        <Image className="theme-toggle-image theme-toggle-sun" src="/icons/theme-sun.svg" alt="" width={96} height={96} draggable={false} priority />
-        <Image className="theme-toggle-image theme-toggle-moon" src="/icons/theme-moon.svg" alt="" width={96} height={96} draggable={false} priority />
-      </span>
-      <span className="theme-toggle-label">{isDark ? "Light" : "Dark"}</span>
+      {isDark ? (
+        <FaSun className="text-[0.8rem]" aria-hidden="true" />
+      ) : (
+        <FaMoon className="text-[0.75rem]" aria-hidden="true" />
+      )}
+      <span>{isDark ? "Light" : "Dark"}</span>
     </button>
   );
 }

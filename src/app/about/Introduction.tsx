@@ -2,16 +2,15 @@ import { profile } from "@/src/data/site";
 
 export default function Introduction() {
   return (
-    <section data-reveal className="rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-sm sm:p-10">
-      <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-700">About me</p>
-      <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
-        Computer Science & Economics student focused on building useful, reliable software.
+    <section data-reveal className="border-b border-slate-200 pb-14">
+      <h1 className="text-6xl font-normal leading-none text-slate-950 sm:text-8xl">
+        About
       </h1>
-      <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-600">
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-500 sm:text-xl">
         {profile.summary}
       </p>
-      <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-600">
-        I’m especially interested in software engineering internships where I can work on backend systems, full-stack applications, automation, data pipelines, and products with real operational impact.
+      <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-500">
+        I&apos;m drawn to projects where software has a clear job: simplify a workflow, connect systems together, or make a useful product feel easier to use.
       </p>
     </section>
   );

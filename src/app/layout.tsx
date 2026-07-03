@@ -5,8 +5,20 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./context/themeContext";
 import ScrollAnimations from "./components/ScrollAnimations";
 import AnimationProvider from "./components/AnimationProvider";
-import CustomCursor from "./components/CustomCursor";
 import "lenis/dist/lenis.css";
+
+const themeInitScript = `
+  try {
+    const savedTheme = localStorage.getItem("james-mullane-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = savedTheme === "light" || savedTheme === "dark"
+      ? savedTheme
+      : prefersDark ? "dark" : "light";
+
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.style.colorScheme = theme;
+  } catch {}
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamesmullane.com"),
@@ -55,14 +67,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen text-slate-950 antialiased transition-colors duration-300 dark:text-slate-100">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="min-h-svh text-slate-950 antialiased transition-colors duration-300 dark:text-slate-100">
         <ThemeProvider>
           <AnimationProvider>
             <ScrollAnimations />
-            <CustomCursor />
-            <NavigationBar />
-            {children}
-            <Footer />
+            <div className="flex min-h-svh flex-col">
+              <NavigationBar />
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </div>
           </AnimationProvider>
         </ThemeProvider>
       </body>
