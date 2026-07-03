@@ -21,7 +21,7 @@ const themeInitScript = `
 `;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jamesmullane.com"),
+  metadataBase: new URL("https://jamesmullane05.github.io"),
   title: {
     default: "James Mullane | Software Engineering Portfolio",
     template: "%s | James Mullane",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "James Mullane | Software Engineering Portfolio",
     description:
       "Computer Science and Economics student at the University of Auckland building full-stack applications, automation tools, APIs, and e-commerce systems.",
-    url: "https://jamesmullane.com",
+    url: "https://jamesmullane05.github.io",
     siteName: "James Mullane Portfolio",
     locale: "en_NZ",
     type: "website",
