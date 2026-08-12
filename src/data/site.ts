@@ -40,9 +40,41 @@ export type Project = {
   link?: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
+  imageAspectRatio?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Spaced Eggs",
+    eyebrow: "WDCC x SESA Hackathon - Cognitive Incline",
+    description:
+      "Built AI-powered study features for a gamified learning platform designed to give users stronger incentives to learn.",
+    impact:
+      "Integrated the GPT API to generate and display study cards, developed the card interface, and created an in-app music player while addressing the theme of combating cognitive decline.",
+    tags: ["OpenAI API", "AI", "Flashcards", "Music Player", "Hackathon"],
+    link: "https://github.com/FinleyNeilson/cookie-crunchers",
+    image: withBasePath("/projects/spaced-eggs.png"),
+    imageFit: "contain",
+    imageAspectRatio: "898 / 862",
+    imageAlt:
+      "Spaced Eggs learning platform showing a virtual egg companion, study progress, deck count, and accuracy statistics.",
+  },
+  {
+    title: "Northstar Markets",
+    eyebrow: "Financial Data - API Integration",
+    description:
+      "Built a stock-market dashboard that retrieves and presents current and historical market data from an external API.",
+    impact:
+      "Created stock search, price-change summaries, interactive historical charts, and selectable time periods in a focused responsive interface.",
+    tags: ["Stock API", "Financial Data", "Data Visualisation", "Charts"],
+    link: "https://github.com/jamesmullane05/northstar-markets",
+    image: withBasePath("/projects/northstar-markets.png"),
+    imageFit: "contain",
+    imageAspectRatio: "897 / 859",
+    imageAlt:
+      "Northstar Markets dashboard displaying Nvidia stock price data and a historical line chart.",
+  },
   {
     title: "Human Nutrition Unit Website",
     eyebrow: "Capstone Project - Team Lead / Backend / DevOps",
@@ -96,7 +128,9 @@ export const projects: Project[] = [
       "Combined software, supplier relationships, customer support, stock management, and Meta marketing campaigns into a working commercial operation.",
     tags: ["Shopify", "Product", "Operations", "Meta Ads"],
     link: "https://www.cosmoshop.co.nz",
-    image: withBasePath("/projects/cosmoshop-home.webp"),
+    image: withBasePath("/projects/cosmoshop-home.png"),
+    imageFit: "contain",
+    imageAspectRatio: "901 / 864",
     imageAlt:
       "Cosmoshop homepage showing its navigation and a Citizen watch campaign.",
   },
@@ -109,7 +143,9 @@ export const projects: Project[] = [
       "Moved the product catalogue from WordPress, resolved website issues, and supported a smoother online shopping experience.",
     tags: ["Shopify", "E-commerce", "Migration", "Support"],
     link: "https://nuttallhendersonjewellers.co.nz",
-    image: withBasePath("/projects/nuttall-henderson-home.webp"),
+    image: withBasePath("/projects/nuttall-henderson-home.png"),
+    imageFit: "contain",
+    imageAspectRatio: "900 / 855",
     imageAlt:
       "Nuttall Henderson Jewellers homepage showing jewellery services and store navigation.",
   },

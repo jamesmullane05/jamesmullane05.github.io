@@ -13,36 +13,45 @@ export default function ProjectsExplorer() {
       </p>
 
       <div className="border-b border-slate-200">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <article
             key={project.title}
             className="group grid gap-7 border-t border-slate-200 py-10 first:border-slate-300 sm:py-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16"
           >
-            <div>
-              <div className="relative aspect-[16/10] overflow-hidden border border-slate-200 bg-slate-100">
+            <div className={project.imageFit === "contain" ? "" : "lg:h-full"}>
+              <div
+                className={`relative aspect-[16/10] overflow-hidden border border-slate-200 bg-slate-100 ${
+                  project.imageFit === "contain" ? "" : "lg:h-full lg:aspect-auto"
+                }`}
+                style={
+                  project.imageAspectRatio
+                    ? { aspectRatio: project.imageAspectRatio }
+                    : undefined
+                }
+              >
                 <Image
                   src={project.image ?? defaultProjectImage}
                   alt={project.imageAlt ?? ""}
                   fill
                   unoptimized
                   sizes="(min-width: 1024px) 38vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.015]"
+                  className={`${
+                    project.imageFit === "contain"
+                      ? "object-contain"
+                      : "object-cover group-hover:scale-[1.015]"
+                  } transition duration-500`}
                 />
-                <span className="absolute left-4 top-4 grid h-8 w-8 place-items-center border border-white/60 bg-white/90 text-xs font-semibold text-slate-700 backdrop-blur">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
               </div>
+            </div>
 
-              <p className="mt-6 max-w-sm text-xs font-semibold uppercase leading-5 tracking-[0.1em] text-slate-500">
+            <div className="flex min-w-0 flex-col">
+              <p className="max-w-sm text-xs font-semibold uppercase leading-5 tracking-[0.1em] text-slate-500">
                 {project.eyebrow}
               </p>
               <h2 className="mt-4 max-w-md text-3xl font-normal leading-tight text-slate-950 sm:text-4xl">
                 {project.title}
               </h2>
-            </div>
-
-            <div className="flex min-w-0 flex-col">
-              <p className="max-w-2xl text-lg leading-8 text-slate-700">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
                 {project.description}
               </p>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500">
