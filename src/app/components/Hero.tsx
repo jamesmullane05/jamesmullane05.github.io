@@ -12,7 +12,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-500 sm:text-xl">
-              Penultimate-year Computer Science and Economics student seeking a software engineering internship.
+              Computer Science and Economics student graduating in July 2027 and seeking a software engineering opportunity.
             </p>
 
             <div className="mt-12 grid border-y border-slate-200 sm:grid-cols-[1fr_1fr_auto]">
@@ -29,7 +29,7 @@ export default function Hero() {
                   Studying
                 </p>
                 <p className="mt-2 text-sm font-medium text-slate-800">
-                  University of Auckland · Graduating 2026
+                  University of Auckland · Graduating July 2027
                 </p>
               </div>
               <div className="flex items-center gap-3 border-t border-slate-200 py-5 sm:border-l sm:border-t-0 sm:pl-8">

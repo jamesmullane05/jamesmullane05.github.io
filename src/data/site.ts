@@ -26,7 +26,7 @@ export const profile = {
   leetcode: "https://leetcode.com/jamesmullane05",
   resume: withBasePath("/cv.pdf"),
   navbarSubtitle: "CS & Economics - Auckland",
-  headline: "Penultimate Computer Science student.",
+  headline: "Computer Science and Economics student graduating July 2027.",
   summary:
     "I'm a University of Auckland Computer Science and Economics student interested in useful software, operational automation, and web experiences.",
 };
@@ -212,7 +212,7 @@ export const education: EducationItem[] = [
   {
     institution: "University of Auckland",
     qualification: "Bachelor of Science / Bachelor of Commerce Conjoint",
-    date: "Feb 2023 - Dec 2026",
+    date: "Feb 2023 - Jul 2027",
     details: "Majors in Computer Science and Economics.",
   },
   {
