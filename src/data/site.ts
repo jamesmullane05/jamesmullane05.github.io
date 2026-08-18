@@ -38,6 +38,8 @@ export type Project = {
   impact: string;
   tags: string[];
   link?: string;
+  linkLabel?: "View source" | "Visit live site" | "View project";
+  featured?: boolean;
   image?: string;
   imageAlt?: string;
   imageFit?: "cover" | "contain";
@@ -54,6 +56,8 @@ export const projects: Project[] = [
       "Integrated the GPT API to generate and display study cards, developed the card interface, and created an in-app music player while addressing the theme of combating cognitive decline.",
     tags: ["OpenAI API", "AI", "Flashcards", "Music Player", "Hackathon"],
     link: "https://github.com/FinleyNeilson/cookie-crunchers",
+    linkLabel: "View source",
+    featured: true,
     image: withBasePath("/projects/spaced-eggs.png"),
     imageFit: "contain",
     imageAspectRatio: "898 / 862",
@@ -69,6 +73,8 @@ export const projects: Project[] = [
       "Created stock search, price-change summaries, interactive historical charts, and selectable time periods in a focused responsive interface.",
     tags: ["Stock API", "Financial Data", "Data Visualisation", "Charts"],
     link: "https://github.com/jamesmullane05/northstar-markets",
+    linkLabel: "View source",
+    featured: true,
     image: withBasePath("/projects/northstar-markets.png"),
     imageFit: "contain",
     imageAspectRatio: "897 / 859",
@@ -84,6 +90,8 @@ export const projects: Project[] = [
       "Set up CI/CD workflows, database migrations, independent developer databases, backend architecture, and API integrations for the frontend.",
     tags: ["Next.js", "TypeScript", "APIs", "CI/CD", "Databases"],
     link: "https://www.capitalise.space/projects/6a44d62d040af2a0b4341c4f",
+    linkLabel: "View project",
+    featured: true,
     image: withBasePath("/projects/human-nutrition-home.webp"),
     imageAlt:
       "Homepage of the Human Nutrition Unit website showing the Auckland research facility.",
@@ -96,6 +104,7 @@ export const projects: Project[] = [
     impact:
       "Turned a manual label-editing workflow into one-click printing while keeping fields editable for custom order requests.",
     tags: ["Shopify API", "C#", ".NET", "Automation", "Windows"],
+    featured: true,
   },
   {
     title: "CSV to Shopify Schema",
@@ -106,6 +115,8 @@ export const projects: Project[] = [
       "Supported column renaming, margin calculations, data transformations, and AI-assisted product-title generation.",
     tags: ["Python", "CSV", "Shopify", "Data", "Automation"],
     link: "https://github.com/jamesmullane05/CSV-to-Shopify-Schema-Language",
+    linkLabel: "View source",
+    featured: true,
     image: withBasePath("/projects/csv-schema-visual.webp"),
     imageAlt:
       "Supplier spreadsheet data flowing through a schema transformation engine into organized e-commerce product records.",
@@ -128,6 +139,7 @@ export const projects: Project[] = [
       "Combined software, supplier relationships, customer support, stock management, and Meta marketing campaigns into a working commercial operation.",
     tags: ["Shopify", "Product", "Operations", "Meta Ads"],
     link: "https://www.cosmoshop.co.nz",
+    linkLabel: "Visit live site",
     image: withBasePath("/projects/cosmoshop-home.png"),
     imageFit: "contain",
     imageAspectRatio: "901 / 864",
@@ -143,6 +155,7 @@ export const projects: Project[] = [
       "Moved the product catalogue from WordPress, resolved website issues, and supported a smoother online shopping experience.",
     tags: ["Shopify", "E-commerce", "Migration", "Support"],
     link: "https://nuttallhendersonjewellers.co.nz",
+    linkLabel: "Visit live site",
     image: withBasePath("/projects/nuttall-henderson-home.png"),
     imageFit: "contain",
     imageAspectRatio: "900 / 855",

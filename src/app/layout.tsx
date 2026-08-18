@@ -48,6 +48,7 @@ export const metadata: Metadata = {
     siteName: "James Mullane Portfolio",
     locale: "en_NZ",
     type: "website",
+    images: [{ url: "/projects/human-nutrition-home.webp", width: 1200, height: 630, alt: "James Mullane software engineering portfolio" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -59,6 +60,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
@@ -72,6 +74,21 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-svh text-slate-950 antialiased transition-colors duration-300 dark:text-slate-100">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "James Mullane",
+              url: SITE_URL,
+              email: "mailto:jamesmullane05@gmail.com",
+              address: { "@type": "PostalAddress", addressLocality: "Auckland", addressCountry: "NZ" },
+              alumniOf: { "@type": "CollegeOrUniversity", name: "University of Auckland" },
+              sameAs: ["https://github.com/Jamesmullane05", "https://www.linkedin.com/in/james-mullane-95a526252/"],
+            }),
+          }}
+        />
         <ThemeProvider>
           <AnimationProvider>
             <ScrollAnimations />

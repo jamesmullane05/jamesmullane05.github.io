@@ -1,5 +1,6 @@
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaFileArrowDown } from "react-icons/fa6";
 import AnimatedLink from "./AnimatedLink";
+import { profile } from "@/src/data/site";
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-500 sm:text-xl">
-              Computer Science and Economics student graduating in July 2027 and seeking a software engineering opportunity.
+              I build practical software that connects APIs, automates operational work, and turns complex data into focused web experiences.
             </p>
 
             <div className="mt-12 grid border-y border-slate-200 sm:grid-cols-[1fr_1fr_auto]">
@@ -46,6 +47,14 @@ export default function Hero() {
                 >
                   Contact
                 </AnimatedLink>
+                <a
+                  href={profile.resume}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-semibold text-slate-600 transition hover:text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:text-slate-300 dark:hover:text-white"
+                >
+                  <FaFileArrowDown aria-hidden="true" /> Resume
+                </a>
               </div>
             </div>
           </div>

@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import AnimatedLink from "./AnimatedLink";
 import ThemeToggle from "./ThemeToggle";
+import { profile } from "@/src/data/site";
 
 const navItems = [
-  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
 ];
@@ -51,6 +51,14 @@ export default function NavigationBar() {
                 </AnimatedLink>
               );
             })}
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-link whitespace-nowrap font-medium text-slate-500 transition duration-200 hover:text-slate-950 focus-visible:text-slate-950 dark:text-slate-400 dark:hover:text-white"
+            >
+              Resume
+            </a>
           </div>
         </div>
 
@@ -123,6 +131,22 @@ export default function NavigationBar() {
                 </AnimatedLink>
               );
             })}
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
+            >
+              View resume
+            </a>
+            <AnimatedLink
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
+            >
+              Contact
+            </AnimatedLink>
           </div>
         </div>
       </nav>
