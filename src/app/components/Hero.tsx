@@ -1,6 +1,5 @@
-import { FaArrowRight, FaFileArrowDown } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import AnimatedLink from "./AnimatedLink";
-import { profile } from "@/src/data/site";
 
 export default function Hero() {
   return (
@@ -47,14 +46,6 @@ export default function Hero() {
                 >
                   Contact
                 </AnimatedLink>
-                <a
-                  href={profile.resume}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-semibold text-slate-600 transition hover:text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:text-slate-300 dark:hover:text-white"
-                >
-                  <FaFileArrowDown aria-hidden="true" /> Resume
-                </a>
               </div>
             </div>
           </div>

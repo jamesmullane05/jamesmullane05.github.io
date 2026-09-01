@@ -1,7 +1,5 @@
-import Education from "./Education";
-import Experience from "./Experience";
 import Introduction from "./Introduction";
-import Skills from "./Skills";
+import SelectedTimeline from "./SelectedTimeline";
 
 export const metadata = {
   title: "About",
@@ -9,11 +7,9 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-6xl space-y-20 px-5 pb-24 pt-36 sm:px-6 sm:pt-40">
+    <main className="mx-auto max-w-6xl space-y-20 px-5 pb-24 pt-36 sm:space-y-28 sm:px-6 sm:pt-44">
       <Introduction />
-      <Education />
-      <Skills />
-      <Experience />
+      <SelectedTimeline />
     </main>
   );
 }
