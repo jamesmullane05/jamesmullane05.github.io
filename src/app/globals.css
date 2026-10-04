@@ -8,8 +8,8 @@
 }
 
 .dark {
-  --background: #020617;
-  --foreground: #e2e8f0;
+  --background: #050505;
+  --foreground: #f5f5f5;
 }
 
 @theme inline {
@@ -26,6 +26,11 @@
 ::selection {
   background: #bae6fd;
   color: #0f172a;
+}
+
+.dark ::selection {
+  background: #3f3f46;
+  color: #ffffff;
 }
 
 :focus-visible {
@@ -63,18 +68,45 @@ a {
   text-decoration: none;
 }
 
+.motion-arrow,
+.motion-arrow-diagonal {
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:is(a, button):is(:hover, :focus-visible) .motion-arrow {
+  transform: translateX(0.25rem);
+}
+
+:is(a, button):is(:hover, :focus-visible) .motion-arrow-diagonal {
+  transform: translate(0.15rem, -0.15rem);
+}
+
 /* Theme overrides for existing Tailwind utility classes. Keeping them here makes the
    light/dark switch work across the whole portfolio without cluttering every component. */
 .dark .bg-white,
 .dark .bg-white\/70,
 .dark .bg-white\/80,
-.dark .bg-white\/85 {
-  background-color: rgba(15, 23, 42, 0.82);
+.dark .bg-white\/85,
+.dark .bg-white\/95 {
+  background-color: rgba(10, 10, 11, 0.96);
 }
 
 .dark .bg-slate-50,
 .dark .bg-slate-100 {
-  background-color: #1e293b;
+  background-color: #111113;
+}
+
+.dark .bg-slate-800,
+.dark .bg-slate-950 {
+  background-color: #18181b;
+}
+
+.dark .bg-slate-400 {
+  background-color: #71717a;
+}
+
+.dark .bg-sky-600 {
+  background-color: #d4d4d8;
 }
 
 .dark .border-white,
@@ -82,33 +114,98 @@ a {
 .dark .border-slate-100,
 .dark .border-slate-200,
 .dark .border-slate-300 {
-  border-color: rgba(51, 65, 85, 0.95);
+  border-color: #262629;
+}
+
+.dark .border-slate-950,
+.dark .border-sky-600 {
+  border-color: #71717a;
 }
 
 .dark .text-slate-950,
 .dark .text-slate-900,
 .dark .text-slate-800,
 .dark .text-slate-700 {
-  color: #f8fafc;
+  color: #f5f5f5;
 }
 
 .dark .text-slate-600 {
-  color: #cbd5e1;
+  color: #b7b7bd;
 }
 
 .dark .text-slate-500 {
-  color: #94a3b8;
+  color: #8c8c94;
+}
+
+.dark .text-slate-400 {
+  color: #777780;
+}
+
+.dark .decoration-slate-300 {
+  text-decoration-color: #3f3f46;
 }
 
 .dark .text-sky-700,
-.dark .text-sky-800 {
-  color: #7dd3fc;
+.dark .text-sky-800,
+.dark .text-sky-400 {
+  color: #d4d4d8;
 }
 
 .dark .shadow-slate-300\/40,
 .dark .shadow-slate-300\/60,
 .dark .shadow-slate-200\/70 {
-  --tw-shadow-color: rgba(2, 6, 23, 0.55);
+  --tw-shadow-color: rgba(0, 0, 0, 0.7);
+}
+
+html.dark [class~="dark:bg-slate-800"] {
+  background-color: #151517;
+}
+
+html.dark [class~="dark:bg-slate-900"],
+html.dark [class~="dark:bg-slate-900/95"] {
+  background-color: #0b0b0d;
+}
+
+html.dark [class~="dark:bg-slate-950"] {
+  background-color: #050505;
+}
+
+/* Inverted primary controls must stay light in dark mode. These selectors are
+   intentionally more specific than the neutral surface overrides above. */
+html.dark [class~="dark:bg-white"] {
+  background-color: #f4f4f5;
+}
+
+html.dark [class~="dark:text-slate-950"] {
+  color: #09090b;
+}
+
+html.dark [class~="dark:hover:bg-slate-200"]:hover {
+  background-color: #d4d4d8;
+}
+
+html.dark [class~="dark:border-slate-500"],
+html.dark [class~="dark:border-slate-700"],
+html.dark [class~="dark:border-slate-800"] {
+  border-color: #29292d;
+}
+
+html.dark [class~="dark:hover:bg-slate-700"]:hover,
+html.dark [class~="dark:hover:bg-slate-800"]:hover {
+  background-color: #1a1a1d;
+}
+
+html.dark [class~="dark:hover:border-slate-500"]:hover,
+html.dark [class~="dark:hover:border-slate-700"]:hover {
+  border-color: #48484e;
+}
+
+html.dark {
+  scrollbar-color: #3a3a3e #050505;
+}
+
+html.dark :focus-visible {
+  outline-color: #a1a1aa;
 }
 
 html {
@@ -164,9 +261,9 @@ html.reveal-ready [data-reveal].is-visible {
 }
 
 .dark {
-  --card: rgba(15, 23, 42, 0.82);
-  --card-strong: #0f172a;
-  --border: rgba(51, 65, 85, 0.95);
+  --card: rgba(10, 10, 11, 0.96);
+  --card-strong: #0b0b0d;
+  --border: #29292d;
 }
 
 .experience-logo {
@@ -292,9 +389,109 @@ html.route-entering main {
 }
 
 .dark .theme-toggle {
-  color: #94a3b8;
+  color: #9b9ba2;
 }
 
 .dark .theme-toggle:hover {
   color: #ffffff;
+}
+
+/* Dark-mode interaction states live after the base palette so muted text does
+   not override hover utilities. Interactive text should resolve to crisp white. */
+html.dark [class~="hover:text-slate-950"]:hover,
+html.dark [class~="hover:text-sky-700"]:hover,
+html.dark [class~="dark:hover:text-white"]:hover,
+html.dark [class~="dark:hover:text-slate-300"]:hover {
+  color: #ffffff;
+}
+
+html.dark .group:hover [class~="group-hover:text-slate-950"],
+html.dark .group:focus-visible [class~="group-hover:text-slate-950"] {
+  color: #ffffff;
+}
+
+html.dark [class~="hover:decoration-slate-950"]:hover {
+  text-decoration-color: #ffffff;
+}
+
+html.dark .nav-link:hover,
+html.dark .nav-link:focus-visible,
+html.dark .nav-link.is-active {
+  color: #ffffff;
+}
+
+/* The contact page uses raised surfaces in dark mode so its two-column layout
+   reads as intentional panels instead of a collection of faint divider lines. */
+html.dark .contact-hero {
+  border-color: #242427;
+}
+
+html.dark .contact-layout {
+  gap: 1rem;
+  border-bottom: 0;
+  padding-top: 1rem;
+}
+
+html.dark .contact-panel {
+  border: 1px solid #242427;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #0d0d0f 0%, #09090a 100%);
+  padding: 2rem;
+}
+
+html.dark .contact-copy {
+  color: #a9a9b0;
+}
+
+html.dark .contact-detail-row {
+  border-color: #29292d;
+  color: #e4e4e7;
+}
+
+html.dark .contact-detail-row svg {
+  color: #8f8f98;
+  transition: color 220ms ease;
+}
+
+html.dark a.contact-detail-row:hover,
+html.dark a.contact-detail-row:hover svg {
+  color: #ffffff;
+}
+
+html.dark .contact-email-cta {
+  border-radius: 0.5rem;
+  background: #f4f4f5;
+  color: #09090b;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+html.dark .contact-email-cta:hover {
+  background: #d4d4d8;
+  color: #09090b;
+}
+
+html.dark .contact-social-list {
+  border-color: #29292d;
+}
+
+html.dark .contact-social-link {
+  margin-inline: -1rem;
+  border-color: #29292d;
+  border-radius: 0.65rem;
+  padding-inline: 1rem;
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease;
+}
+
+html.dark .contact-social-link:hover {
+  background: #141416;
+  transform: translateX(0.2rem);
+}
+
+@media (max-width: 1023px) {
+  html.dark .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }

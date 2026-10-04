@@ -21,10 +21,10 @@ const lightThemeColors: ColorScheme = {
 };
 
 const darkThemeColors: ColorScheme = {
-  background: "#020617",
-  text: "#e2e8f0",
-  primary: "#38bdf8",
-  secondary: "#0f172a",
+  background: "#050505",
+  text: "#f5f5f5",
+  primary: "#d4d4d8",
+  secondary: "#0b0b0d",
 };
 
 const STORAGE_KEY = "james-mullane-theme";

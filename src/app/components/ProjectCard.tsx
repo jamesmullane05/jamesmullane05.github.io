@@ -53,7 +53,7 @@ export default function ProjectCard({
             rel="noreferrer"
             className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-slate-950 transition hover:text-sky-700"
           >
-            {link.includes("github") ? <FaGithub /> : <FaArrowUpRightFromSquare />}
+            {link.includes("github") ? <FaGithub /> : <FaArrowUpRightFromSquare className="motion-arrow-diagonal" />}
             Open Project
           </a>
         )}

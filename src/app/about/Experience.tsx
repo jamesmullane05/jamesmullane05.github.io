@@ -38,7 +38,7 @@ export default function Experience() {
                         aria-label={`Open ${item.company} website`}
                         className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-950"
                       >
-                        Website <FaArrowUpRightFromSquare className="text-[10px]" />
+                        Website <FaArrowUpRightFromSquare className="motion-arrow-diagonal text-[10px]" />
                       </a>
                     )}
                   </div>

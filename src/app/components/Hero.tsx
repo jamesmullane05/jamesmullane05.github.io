@@ -1,55 +1,15 @@
-import { FaArrowRight } from "react-icons/fa6";
-import AnimatedLink from "./AnimatedLink";
+import { profile } from "@/src/data/site";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="mx-auto flex min-h-svh max-w-6xl flex-col px-5 pt-24 sm:px-6">
-        <div className="flex flex-1 items-center py-16">
-          <div data-reveal className="w-full">
-            <h1 className="text-6xl font-normal leading-none text-slate-950 sm:text-8xl">
-              James Mullane
-            </h1>
-
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-500 sm:text-xl">
-              I build practical software that connects APIs, automates operational work, and turns complex data into focused web experiences.
-            </p>
-
-            <div className="mt-12 grid border-y border-slate-200 sm:grid-cols-[1fr_1fr_auto]">
-              <div className="py-5 sm:pr-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
-                  Based in
-                </p>
-                <p className="mt-2 text-sm font-medium text-slate-800">
-                  Auckland, New Zealand
-                </p>
-              </div>
-              <div className="border-t border-slate-200 py-5 sm:border-l sm:border-t-0 sm:px-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
-                  Studying
-                </p>
-                <p className="mt-2 text-sm font-medium text-slate-800">
-                  University of Auckland · Graduating July 2027
-                </p>
-              </div>
-              <div className="flex items-center gap-3 border-t border-slate-200 py-5 sm:border-l sm:border-t-0 sm:pl-8">
-                <AnimatedLink
-                  href="/projects"
-                  className="group inline-flex items-center gap-2 rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
-                >
-                  View projects
-                  <FaArrowRight className="text-xs transition duration-300 group-hover:translate-x-1" />
-                </AnimatedLink>
-                <AnimatedLink
-                  href="/contact"
-                  className="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-100"
-                >
-                  Contact
-                </AnimatedLink>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="mx-auto flex min-h-[54svh] max-w-6xl items-center justify-center px-5 pb-14 pt-32 text-center sm:px-6 sm:pb-20 sm:pt-36 lg:min-h-[58svh]">
+      <div data-reveal>
+        <h1 className="text-5xl font-bold leading-none tracking-[-0.055em] text-slate-950 sm:text-7xl lg:text-8xl">
+          {profile.name}
+        </h1>
+        <p className="mx-auto mt-5 max-w-3xl text-xl font-medium leading-tight tracking-[-0.025em] text-slate-800 sm:text-3xl">
+          Computer Science &amp; Economics Student
+        </p>
       </div>
     </section>
   );

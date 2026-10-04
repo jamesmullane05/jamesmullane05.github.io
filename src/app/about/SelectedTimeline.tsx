@@ -86,11 +86,11 @@ export default function SelectedTimeline() {
       <div className="mt-20 flex flex-wrap gap-3 border-t border-slate-200 pt-8">
         <AnimatedLink href="/projects" className="group inline-flex items-center gap-3 rounded-lg bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700">
           View projects
-          <FaArrowRight className="text-xs transition group-hover:translate-x-1" />
+          <FaArrowRight className="motion-arrow text-xs" />
         </AnimatedLink>
         <AnimatedLink href="/contact" className="group inline-flex items-center gap-3 rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-100">
           Get in touch
-          <FaArrowRight className="text-xs transition group-hover:translate-x-1" />
+          <FaArrowRight className="motion-arrow text-xs" />
         </AnimatedLink>
       </div>
     </section>

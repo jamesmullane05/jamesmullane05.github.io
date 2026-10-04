@@ -34,9 +34,12 @@ export const profile = {
 export type Project = {
   title: string;
   eyebrow: string;
+  projectType: string;
   description: string;
   impact: string;
   tags: string[];
+  repository?: string;
+  liveUrl?: string;
   link?: string;
   linkLabel?: "View source" | "Visit live site" | "View project";
   featured?: boolean;
@@ -50,46 +53,48 @@ export const projects: Project[] = [
   {
     title: "Spaced Eggs",
     eyebrow: "WDCC x SESA Hackathon - Cognitive Incline",
+    projectType: "Hackathon",
     description:
       "Built AI-powered study features for a gamified learning platform designed to give users stronger incentives to learn.",
     impact:
       "Integrated the GPT API to generate and display study cards, developed the card interface, and created an in-app music player while addressing the theme of combating cognitive decline.",
     tags: ["OpenAI API", "AI", "Flashcards", "Music Player", "Hackathon"],
     link: "https://github.com/FinleyNeilson/cookie-crunchers",
+    repository: "https://github.com/FinleyNeilson/cookie-crunchers",
     linkLabel: "View source",
     featured: true,
-    image: withBasePath("/projects/spaced-eggs.png"),
-    imageFit: "contain",
-    imageAspectRatio: "898 / 862",
+    image: withBasePath("/projects/spaced-eggs-wide.png"),
     imageAlt:
       "Spaced Eggs learning platform showing a virtual egg companion, study progress, deck count, and accuracy statistics.",
   },
   {
     title: "Northstar Markets",
     eyebrow: "Financial Data - API Integration",
+    projectType: "Personal project",
     description:
       "Built a stock-market dashboard that retrieves and presents current and historical market data from an external API.",
     impact:
       "Created stock search, price-change summaries, interactive historical charts, and selectable time periods in a focused responsive interface.",
     tags: ["Stock API", "Financial Data", "Data Visualisation", "Charts"],
     link: "https://github.com/jamesmullane05/northstar-markets",
+    repository: "https://github.com/jamesmullane05/northstar-markets",
     linkLabel: "View source",
     featured: true,
     image: withBasePath("/projects/northstar-markets.png"),
-    imageFit: "contain",
-    imageAspectRatio: "897 / 859",
     imageAlt:
       "Northstar Markets dashboard displaying Nvidia stock price data and a historical line chart.",
   },
   {
     title: "Human Nutrition Unit Website",
     eyebrow: "Capstone Project - Team Lead / Backend / DevOps",
+    projectType: "University capstone",
     description:
       "Led a six-person development team delivering a public website for a University of Auckland research institute.",
     impact:
       "Set up CI/CD workflows, database migrations, independent developer databases, backend architecture, and API integrations for the frontend.",
     tags: ["Next.js", "TypeScript", "APIs", "CI/CD", "Databases"],
     link: "https://www.capitalise.space/projects/6a44d62d040af2a0b4341c4f",
+    liveUrl: "https://www.capitalise.space/projects/6a44d62d040af2a0b4341c4f",
     linkLabel: "View project",
     featured: true,
     image: withBasePath("/projects/human-nutrition-home.webp"),
@@ -99,6 +104,7 @@ export const projects: Project[] = [
   {
     title: "Shopify Label Printing Desktop App",
     eyebrow: "Automation - E-commerce Operations",
+    projectType: "Internal tool",
     description:
       "Engineered a desktop application that connects Shopify order data to Brother B-PAC label-printing software.",
     impact:
@@ -109,12 +115,14 @@ export const projects: Project[] = [
   {
     title: "CSV to Shopify Schema",
     eyebrow: "Data Processing - Product Imports",
+    projectType: "Internal tool",
     description:
       "Created a schema-driven processor that transforms supplier CSV files into Shopify-ready product data.",
     impact:
       "Supported column renaming, margin calculations, data transformations, and AI-assisted product-title generation.",
     tags: ["Python", "CSV", "Shopify", "Data", "Automation"],
     link: "https://github.com/jamesmullane05/CSV-to-Shopify-Schema-Language",
+    repository: "https://github.com/jamesmullane05/CSV-to-Shopify-Schema-Language",
     linkLabel: "View source",
     featured: true,
     image: withBasePath("/projects/csv-schema-visual.webp"),
@@ -124,6 +132,7 @@ export const projects: Project[] = [
   {
     title: "Facebook Marketplace Automation",
     eyebrow: "Browser Automation - Internal Systems",
+    projectType: "Internal tool",
     description:
       "Developed software that reads product information from Excel and creates Facebook Marketplace listings automatically.",
     impact:
@@ -133,38 +142,39 @@ export const projects: Project[] = [
   {
     title: "Cosmoshop E-commerce Platform",
     eyebrow: "Co-founder - Full-stack / Operations",
+    projectType: "Commercial project",
     description:
       "Operate Cosmoshop's online storefront and connected systems across its website, Trade Me, Chrono24, and Facebook Marketplace.",
     impact:
       "Combined software, supplier relationships, customer support, stock management, and Meta marketing campaigns into a working commercial operation.",
     tags: ["Shopify", "Product", "Operations", "Meta Ads"],
     link: "https://www.cosmoshop.co.nz",
+    liveUrl: "https://www.cosmoshop.co.nz",
     linkLabel: "Visit live site",
     image: withBasePath("/projects/cosmoshop-home.png"),
-    imageFit: "contain",
-    imageAspectRatio: "901 / 864",
     imageAlt:
-      "Cosmoshop homepage showing its navigation and a Citizen watch campaign.",
+      "Cosmoshop homepage showing its navigation and a DKNY watch campaign.",
   },
   {
     title: "Nuttall Henderson Jewellers Website",
     eyebrow: "Web Development - Shopify Migration",
+    projectType: "Client work",
     description:
       "Designed, migrated, and maintained a Shopify website for an Auckland jewellery business.",
     impact:
       "Moved the product catalogue from WordPress, resolved website issues, and supported a smoother online shopping experience.",
     tags: ["Shopify", "E-commerce", "Migration", "Support"],
     link: "https://nuttallhendersonjewellers.co.nz",
+    liveUrl: "https://nuttallhendersonjewellers.co.nz",
     linkLabel: "Visit live site",
     image: withBasePath("/projects/nuttall-henderson-home.png"),
-    imageFit: "contain",
-    imageAspectRatio: "900 / 855",
     imageAlt:
-      "Nuttall Henderson Jewellers homepage showing jewellery services and store navigation.",
+      "Nuttall Henderson Jewellers homepage showing its navigation and winter sale campaign.",
   },
   {
     title: "Linux User Group Website",
     eyebrow: "WDCC - Frontend / RSS",
+    projectType: "Team project",
     description:
       "Contribute within an eleven-person team delivering a website for the University of Auckland Linux User Group.",
     impact:

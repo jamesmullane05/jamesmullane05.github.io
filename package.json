@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "screenshots": "node scripts/capture-project-screenshots.mjs"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
